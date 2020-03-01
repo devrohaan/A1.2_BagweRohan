@@ -267,6 +267,7 @@ city_plot = alt.Chart(histdata_R_minard_cities_dataset).mark_text(
     longitude='long', latitude='lat', text='city',).properties(
         title='Cities')
 
+city_plot.configure_view(width=800, height=500, strokeWidth=0).configure_title(fontSize=24).save("cityPlot.html")
 #TROOPS MOVEMENT
 troop_movement_plot = alt.Chart(histdata_R_minard_troops_dataset).mark_trail().encode(
     longitude='long',latitude='lat',size=alt.Size('survivors',
